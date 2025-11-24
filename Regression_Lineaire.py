@@ -20,6 +20,11 @@ X_train, X_test, y_train, y_test = train_test_split(
 modele = LinearRegression()
 modele.fit(X_train, y_train)
 
+#Pour pouvoir voir les poids et biais trouvés
+print("Poids (w) appris :", modele.coef_)
+print("Biais (b) appris :", modele.intercept_)
+
+
 
 #evaluer le modèle
 score = modele.score(X_test, y_test)
